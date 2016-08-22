@@ -53,9 +53,9 @@ End Function
 
 Function GetApiArray()
         url = CreateObject("roUrlTransfer")
-    url.SetUrl("https://www.dropbox.com/s/w43c68m6ewwo0id/media.rss?dl=0")
+    url.SetUrl("https://raw.githubusercontent.com/gioperez13/onboard-roku/master/source/media.rss")
     rsp = url.GetToString()
-    print rsp
+
     responseXML = ParseXML(rsp)
     responseXML = responseXML.GetChildElements()
     responseArray = responseXML.GetChildElements()
